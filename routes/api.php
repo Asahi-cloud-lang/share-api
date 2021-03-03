@@ -7,26 +7,14 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\LikesController;
-use App\Http\Controllers\CommemntsController;
+use App\Http\Controllers\CommentsController;
 
 Route::apiResource('/shares', SharesController::class);
-
 Route::post('/register', [RegisterController::class, 'post']);
-
 Route::post('/login', [LoginController::class, 'post']);
-
 Route::post('/logout', [LogoutController::class, 'post']);
-
 Route::get('/user', [UsersController::class, 'get']);
-
 Route::put('/user', [UsersController::class, 'put']);
-
 Route::post('/like', [LikesController::class, 'post']);
-
 Route::delete('/like', [LikesController::class, 'delete']);
-
-Route::post('/comment', [CommemntsController::class, 'post']);
-
-
-
-
+Route::post('/comment', [CommentsController::class, 'post']);
